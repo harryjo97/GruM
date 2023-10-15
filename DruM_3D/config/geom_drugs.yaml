@@ -1,0 +1,69 @@
+data:
+  data: GEOM_DRUGS
+  dir: './data'
+  batch_size: 64
+  max_node_num: 181
+  max_feat_num: 16
+  init: atom
+  scale: 
+    pos: 4.0
+    atomtype: 1.0
+    charge: None
+  include_charge: False
+
+mix:
+  atom_feat: # Atom type
+    type: OU
+    drift_coeff: 1 
+    sigma_0: 1.0
+    sigma_1: 0.7
+    num_scales: 1000
+  pos:
+    type: OU
+    drift_coeff: 1
+    sigma_0: 0.2
+    sigma_1: 0.1
+    num_scales: 1000
+
+model:
+  type: EGNN
+  num_layers: 4
+  nhid: 256
+  time_cond: True
+
+train:
+  name: train
+  use_tensorboard: False
+  num_epochs: 13
+  save_interval: 1
+  print_interval: 1
+  reduce_mean: False 
+  lr: 0.0001
+  lr_schedule: False
+  ema: 0.999
+  weight_decay: 1.0e-12
+  grad_norm: 1.0
+  lr_decay: 0.999
+  eps: 2.0e-4
+  optimizer: adamw
+  loss_type: 
+    atom_feat: scaled
+    pos: scaled
+  resume: False
+
+sampler:
+  predictor: Euler
+  corrector: None
+  snr: 0.0
+  scale_eps: 0.0
+  n_steps: 1
+
+ckpt: GEOM_DRUGS 
+
+sample:
+  n_samples: 10000
+  batch_size: 800
+  use_ema: True
+  noise_removal: True
+  eps: 1.0e-3 
+  seed: 42

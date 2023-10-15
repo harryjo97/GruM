@@ -1,0 +1,78 @@
+data:
+  data: QM9
+  dir: './data'
+  batch_size: 2048
+  max_node_num: 9
+  max_feat_num: 4
+  feat: atom
+  perm_mix: True
+
+mix:
+  x: 
+    type: OU
+    drift_coeff: 1 
+    sigma_0: 0.4
+    sigma_1: 0.2
+    num_scales: 1000
+  adj: 
+    type: OU 
+    drift_coeff: 1 
+    sigma_0: 0.4
+    sigma_1: 0.2
+    num_scales: 1000
+
+model:
+  type: transformer_mol
+  num_layers: 8 
+  input_dims:
+    E: 2
+    y: 0
+  hidden_mlp_dims:
+    X: 256
+    E: 256
+    y: 128
+  hidden_dims:
+    dx: 256
+    de: 128
+    dy: 64
+    n_head: 8
+    dim_ffX: 256
+    dim_ffE: 256
+    dim_ffy: 128
+  adj_scale: 3
+  
+train:
+  name: test
+  use_tensorboard: True
+  lambda_train: 5
+  num_epochs: 1000
+  save_interval: 200 
+  reduce_mean: False 
+  lr: 2.0e-4 
+  lr_schedule: False 
+  ema: 0.999
+  weight_decay: 1.0e-12 
+  grad_norm: 1.0
+  lr_decay: 0.999
+  eps: 2.0e-3 
+  optimizer: adamw
+  loss_type:
+    x: default
+    adj: default
+
+sampler:
+  predictor: Euler
+  corrector: None
+  snr: 0.0
+  scale_eps: 0.0
+  n_steps: 1
+
+sample:
+  test_size: 10000 
+  batch_size: 10000
+  use_ema: True 
+  noise_removal: True
+  eps: 2.0e-3 
+  seed: 42
+
+ckpt: QM9
