@@ -24,7 +24,7 @@ In this repository, we implement the *Destination-Predicting Diffusion Mixture* 
 
 ## Code structure
 
-We provide **two separate projects** of DruM for **three types of graph generation tasks**:
+We provide <u>two separate projects</u> of DruM for <u>three types of graph generation tasks</u>:
 
 - General graph 
 - 2D molecule 
@@ -41,6 +41,19 @@ DruM_3D : Code for 3D molecule generation
 ```
 
 We provide the details in README.md of each projects.
+
+
+## Dependencies
+
+Create environment with **Python 3.9.15** and **Pytorch 1.12.1**. 
+Use the following command to install the requirements:
+
+```
+pip install -r requirements.txt
+conda install pyg -c pyg
+conda install -c conda-forge graph-tool=2.45
+conda install -c conda-forge rdkit=2022.03.2
+```
 
 
 ## Citation

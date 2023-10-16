@@ -18,4 +18,6 @@ tensorboard
 termcolor
 dill
 fcd-torch
+imageio
+msgpack
 setuptools==59.5.0

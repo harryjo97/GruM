@@ -1,14 +1,16 @@
 # DruM code for 3D Molecule Generation
 
 ## Dependencies
-<!-- DruM for 3D molecule generation is built in **Python 3.8.12** and **PyTorch 1.13.1**. -->
-DruM for 3D molecule generation is built in **Python 3.9.15** and **PyTorch 1.12.1**.
+
+Please refer to the **Dependencies** in [READEME.md](../README.md) of the root directory.
+
+<!-- DruM for 3D molecule generation is built in **Python 3.9.15** and **PyTorch 1.12.1**.
 Please run the following commands after installing PyTorch.
 ```sh
 pip install -r requirements.txt
 conda install pyg -c pyg
 conda install -c conda-forge rdkit=2022.03.2
-```
+``` -->
 
 ## Running Experiments
 

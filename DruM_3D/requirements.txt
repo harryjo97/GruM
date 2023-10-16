@@ -1,9 +1,0 @@
-tqdm
-pyyaml
-easydict
-tensorboard
-termcolor
-networkx
-imageio
-msgpack
-six
