@@ -50,7 +50,7 @@ We provide checkpoints of the pretrained models in the following links:
 
 + QM9_3D: [https://drive.google.com/drive/folders/18EUee5Im4Yguv89f128eTrDj-aOz6xuR?usp=sharing](https://drive.google.com/drive/folders/18EUee5Im4Yguv89f128eTrDj-aOz6xuR?usp=sharing)
 
-+ GEOM_DRUGS: To be uploaded soon. [https://drive.google.com/drive/folders/17SU5KIrWzneFsQwb5-q2Gh39Y9cQ2MKJ?usp=sharing](https://drive.google.com/drive/folders/17SU5KIrWzneFsQwb5-q2Gh39Y9cQ2MKJ?usp=sharing) 
++ GEOM_DRUGS: [https://drive.google.com/drive/folders/17SU5KIrWzneFsQwb5-q2Gh39Y9cQ2MKJ?usp=sharing](https://drive.google.com/drive/folders/17SU5KIrWzneFsQwb5-q2Gh39Y9cQ2MKJ?usp=sharing) 
 
 ## Generated molecules
 
