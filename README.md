@@ -1,8 +1,8 @@
-# Graph Generation with Destination-Predicting Diffusion Mixture
+# Graph Generation with Diffusion Mixture
 
-Official Code Repository for the paper [Graph Generation with Destination-Predicting Diffusion Mixture](https://arxiv.org/abs/2302.03596).
+Official Code Repository for the paper [Graph Generation with Diffusion Mixture](https://arxiv.org/abs/2302.03596).
 
-In this repository, we implement the *Destination-Predicting Diffusion Mixture* (DruM).
+In this repository, we implement the *Graph Diffusion Mixture* (GruM).
 
 <p align="middle">
   <img src="assets/(Fig14-2) Planar_process.gif" width="45%" />
@@ -40,12 +40,12 @@ DruM_2D : Code for general graph generation / 2D molecule generation
 DruM_3D : Code for 3D molecule generation
 ```
 
-We provide the details in README.md of each projects.
+We provide the details in README.md for each projects.
 
 
 ## Dependencies
 
-Create environment with **Python 3.9.15** and **Pytorch 1.12.1**. 
+Create an environment with **Python 3.9.15** and **Pytorch 1.12.1**. 
 Use the following command to install the requirements:
 
 ```
