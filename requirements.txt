@@ -10,7 +10,7 @@ networkx
 numpy
 pyparsing
 python-dateutil
-scipy
+scipy==1.11.0
 six
 pyemd
 requests
