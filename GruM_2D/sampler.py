@@ -54,9 +54,11 @@ class Sampler(object):
         NUM_SAMPLES = len(self.test_graph_list)
         num_sampling_rounds = math.ceil(NUM_SAMPLES / self.config.sample.batch_size)
         gen_graph_list = []
+        # Workaround for cpu
+        sample_device = self.device[0] if isinstance(self.device, list) else self.device
         for r in range(num_sampling_rounds):
             self.init_flags = get_init_flags(self.train_graph_list, self.configt, 
-                                            self.config.sample.batch_size).to(self.device)
+                                            self.config.sample.batch_size).to(sample_device)
             x, adj, (x_conv, adj_conv) = self.sampling_fn(self.model, self.init_flags)
             adj_int = quantize(adj)
             gen_graph_list.extend(adjs_to_graphs(adj_int, True))
