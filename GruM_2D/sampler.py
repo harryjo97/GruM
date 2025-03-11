@@ -56,7 +56,7 @@ class Sampler(object):
         gen_graph_list = []
         for r in range(num_sampling_rounds):
             self.init_flags = get_init_flags(self.train_graph_list, self.configt, 
-                                            self.config.sample.batch_size).to(self.device[0])
+                                            self.config.sample.batch_size).to(self.device)
             x, adj, (x_conv, adj_conv) = self.sampling_fn(self.model, self.init_flags)
             adj_int = quantize(adj)
             gen_graph_list.extend(adjs_to_graphs(adj_int, True))
