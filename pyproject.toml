@@ -3,7 +3,7 @@ name = "grum"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = "==3.9.*"
 dependencies = [
     "cycler>=0.12.1",
     "dill>=0.3.9",
